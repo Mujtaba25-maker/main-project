@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small custom */
+body{
+    margin:0;
+    padding:0;
+}
+section{
+    scroll-margin-top: 160px;
+}

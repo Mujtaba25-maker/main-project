@@ -1,0 +1,60 @@
+/* .card img {
+  height: 250px;
+  object-fit: cover;
+} */
+
+.card .card-img-overlay {
+  border-radius: 10px;
+  
+}
+
+.card1img {
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* .card-container {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 20px;
+ justify-content: center;
+ padding: 20px;
+}
+
+.course-card {
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.course-card img {
+    height: 200px;
+    object-fit: cover;
+} */
+
+
+/* body {
+  background-color: #f8f9fa;
+  font-family: "Inter", sans-serif;
+}
+
+.team-card:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+
+.job-card:hover {
+  background-color: #f3f7f3;
+  transition: 0.3s ease;
+}
+
+h2, h3 {
+  color: #043b25;
+}
+
+button.btn-success {
+  background-color: #1a6d3b;
+  border: none;
+} */
+
