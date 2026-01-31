@@ -1,3 +1,9 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
+
+
 const instructorData = {
   name: "James Martinez",
   title: "Meet James Martinez",
@@ -13,10 +19,11 @@ const instructorData = {
     { label: "Courses", value: "5", icon: "▶️" },
   ],
   brands: [
-    "https://dummyimage.com/120x40/ffffff/000000&text=logoipsum",
-    "https://dummyimage.com/120x40/ffffff/000000&text=logoipsum",
-    "https://dummyimage.com/120x40/ffffff/000000&text=logoipsum",
-    "https://dummyimage.com/120x40/ffffff/000000&text=logoipsum",
+    "https://framerusercontent.com/images/Ru8vbge7kRiNpkvXOcAycTFFc.svg",
+    "https://framerusercontent.com/images/vF87DMcYJ1zEFwQiaIREbFNUe24.svg",
+    "https://framerusercontent.com/images/CCoZT2jkWCqgYUmsJnhZvEb0M.svg",
+    "https://framerusercontent.com/images/CCoZT2jkWCqgYUmsJnhZvEb0M.svg",
+    "https://framerusercontent.com/images/Ru8vbge7kRiNpkvXOcAycTFFc.svg",
   ],
 };
 
@@ -67,17 +74,34 @@ export default function InstructorSection() {
           <p className="text-xs text-gray-400 mb-4 uppercase tracking-wider">
             Brands Educated
           </p>
+<Swiper
+  modules={[Autoplay]}
+  spaceBetween={20}
+  slidesPerView={3}
+  loop={true}
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: false,
+  }}
+  breakpoints={{
+    640: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }}
+  className="opacity-80"
+>
+  {brands.map((logo, index) => (
+    <SwiperSlide key={index}>
+      <div className="flex justify-center items-center">
+        <img
+          src={logo}
+          alt="Brand logo"
+          className="h-8 object-contain"
+        />
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
 
-          <div className="flex flex-wrap gap-6 items-center opacity-80">
-            {brands.map((logo, index) => (
-              <img
-                key={index}
-                src={logo}
-                alt="Brand logo"
-                className="h-8 object-contain"
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
